@@ -1,0 +1,33 @@
+<settings>
+<servers>
+  <server>
+    <id>cloud-devops-Cloud-DevOps-Repo</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>cloud-devops-Cloud-DevOps-Repo</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>cloud-devops-Cloud-DevOps-Repo</id>
+        <url>https://cloud-devops-224193574620.d.codeartifact.us-east-1.amazonaws.com/maven/Cloud-DevOps-Repo/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>cloud-devops-Cloud-DevOps-Repo</id>
+    <name>cloud-devops-Cloud-DevOps-Repo</name>
+    <url>https://cloud-devops-224193574620.d.codeartifact.us-east-1.amazonaws.com/maven/Cloud-DevOps-Repo/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+</settings>
